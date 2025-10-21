@@ -3,10 +3,117 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Steins;Gate - Guía ruta Suzuha </title>
+<title>Steins;Gate - Guía Completa Español </title>
 <style>
 body { font-family: 'Comic Sans MS', cursive, sans-serif; background-color:#f0f0f0; margin:0; padding:0; transition: background-color 0.3s;}
 h1,h2{text-align:center;color:#333;}
+.menu-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: white;
+  color: #333;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dropbtn:hover {
+  background-color: #f2f2f2;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  z-index: 1;
+  text-align: left;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.2s;
+}
+
+.dropdown-content a:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+.centro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bloque-desplegable {
+  background-color: #fff;   /* fondo blanco */
+  border-radius: 10px;
+  padding: 15px 30px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  width: fit-content;       /* se ajusta al texto */
+  max-width: 90vw;  
+  transition: background-color 0.3s ease;     
+  text-align: center;
+}
+
+.texto-click {
+  cursor: pointer;
+  font-size: 1.2em;
+  color: #333;
+  margin: 0;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.texto-click:hover {
+  color: #d9534f;
+  transform: scale(1.05);
+}
+
+.texto-oculto {
+  display: none;
+  margin-top: 15px;
+  text-align: left;
+  line-height: 1.6;
+}
+
+.texto-oculto.activo {
+  display: block;
+}
+
+label {
+  display: block;
+  margin: 8px 0;
+}
+
+.bloque-desplegable label {
+  display: block;
+  margin: 8px 0;
+}
+
+
 .checklist{max-width:900px;margin:20px auto;padding:20px;background-color:#fff;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,0.1);}
 .checklist label{display:block;margin:8px 0;color:#555;}
 .checklist input[type="checkbox"]{margin-right:10px;}
@@ -18,9 +125,24 @@ h1,h2{text-align:center;color:#333;}
 </style>
 </head>
 <body>
-<h1>Steins;Gate - Guía ruta Suzuha</h1>
-<img src="https://images3.alphacoders.com/165/thumb-1920-165209.jpg" width="800" height="480" style="display: block; margin: 0 auto;">
+<h1>Steins;Gate - Guía Completa Español </h1>
+<img src="https://static.zerochan.net/Steins%3BGate.full.146332.jpg" width="620" height="480" style="display: block; margin: 0 auto;">
 
+<!-- Menú desplegable centrado -->
+<div class="menu-container">
+  <div class="dropdown">
+    <button class="dropbtn">Selección rápida</button>
+    <div class="dropdown-content">
+      <a href="#intro">Introducción</a>
+      <a href="#suzu">Ruta Suzuha</a>
+      <a href="#faris">Ruta Faris</a>
+      <a href="#luka">Ruta Luka</a>
+      <a href="#mayu">Ruta Mayuri</a>
+      <a href="#kuri">Ruta Kurisu</a>
+      <a href="#Fin">Final</a>
+    </div>
+  </div>
+</div>
 
 <div class="footer">
 <p>Guía en Español adaptada de <a href="https://polaster.com/guia/steinsgate/rutas/suzuha-amane" target="_blank">Polaster</a></p>
@@ -33,25 +155,38 @@ h1,h2{text-align:center;color:#333;}
 
 <!-- Ayudas -->
 <div class="checklist">
-<h2>Introducción</h2>
+<h2 id="intro">Introducción</h2>
+<label> <span class="important"> Esta guía está planteada para seguir un orden concreto para sacar todos los finales </label>
 <label> <span class="important">EMAIL RECIBIDO → </span> Recibes un correo que tendrás que leer, ignorar, o responder </label>
 <label> <span class="important">LLAMADA ENTRANTE → </span> Recibes una llamada que tienes que responder o ignorar dependiendo lo que indique </label>
 <label> <span class="important">Abrir archivo adjunto</span> Algunos correos vienen con un archivo adjunto, para abrirlo solo tienes que darle click al mismo correo </label>
 <label> <span class="important">Los que no indican que ha llegado un mensaje, o tienes una llamada, son momentos específicos en los que soltarán ese dialogo y tendrás que seguir lo que indica la guía</span></label>
 <label> <span class="important">Crear archivo de guardado</span> En algunos puntos se dirá que hay que crear archivos de guardado, son para poder sacar todos los finales de la novela.</label>
-<label> Ahora que ya están las bases sentadas espero que sea de ayuda la guía, intentaré seguir con la traducción para poder completarlo todo. </label>
-  </div>
-  
+<label> Ahora que ya están las bases sentadas espero que sea de ayuda la guía. </label>
+   </div>
+
+<!-- Ruta Suzuha -->
+<h1 id="suzu">Ruta suzuha</h1>
+<img src="https://static.zerochan.net/Amane.Suzuha.full.647851.jpg" width="800" height="480" style="display: block; margin: 0 auto;">
+
+
+
 <!-- Capítulo 1 -->
+<div><h2 id="1"> </h2></div>
+<div class="centro">
+  <div class="bloque-desplegable">
+    <p class="texto-click">Capítulo 1</p>
+    <div class="texto-oculto">
+      <p>
 <div class="checklist">
-<h2>Capítulo 1</h2>
+<h2 id="cap1">Capítulo 1</h2>
 <label><input type="checkbox" id="c1a1"> Busco en mis pantalones y la bata → Abrir libreta de contactos → PhoneWave → <span class="important">Introduce 10 cifras incorrectas</span> → 120#</label> Trofeo <span class="important">Homerun-level Clumsiness</span></label>
 <label><input type="checkbox" id="c1a3"> EMAIL RECIBIDO →   7/28 Mayuri (sub: Upa···) → Responde <span class="important">Upa</span></label>
 <label><input type="checkbox" id="c1a4"> EMAIL RECIBIDO →  7/28 Mayuri (sub: Don't sell it ><) → Responde <span class="important">Kakeru Kun</span> → Abrir archivo adjunto para recibir 2 wallpapers</label>
-<label><input type="checkbox" id="c1a5"> Demasiado calor  → 7/29 Lukako → Responder <span class="important">exorcismo</span></label>
+<label><input type="checkbox" id="c1a5"> Demasiado calor  → 7/29 Luka → Responder <span class="important">exorcismo</span></label>
 <label><input type="checkbox" id="c1a6"> Llamaré a Daru → Abrir libreta de contactos → Daru</label>
 <label><input type="checkbox" id="c1a7"> Le voy a enviar un correo en blanco → Abrir libreta de contactos → Shining Finger</label>
-<label><input type="checkbox" id="c1a8"> EMAIL RECIBIDO →  7/29 Lukako (sub: Religious services) → Leer </label>
+<label><input type="checkbox" id="c1a8"> EMAIL RECIBIDO →  7/29 Luka (sub: Religious services) → Leer </label>
 <label><input type="checkbox" id="c1a9"> EMAIL RECIBIDO →  Mail 7/29 Shining Finger → Leer y abrir adjunto</label>
 <label><input type="checkbox" id="c1a10"> Para desanimarla, por supuesto. Fuhahaha!  → Abrir correo → Bandeja de entrada → 7/29 Shining Finger (sub: Please reply) → <span class="important">Responde</span></label>
 <label><input type="checkbox" id="c1a11"> Daru no había hablado con Faris lo suficiente... → 7/29 Faris (sub: The final battle is close at hand nya) → Responde <span class="important">Cruz roja del sur</span> </label>
@@ -59,17 +194,34 @@ h1,h2{text-align:center;color:#333;}
 <label><input type="checkbox" id="c1a13"> Ahora, donde he puesto el móvil? → Libreta de contactos → PhoneWave → 120# </label>
 <label><input type="checkbox" id="c1a14"> EMAIL RECIBIDO →  7/29 Mayuri → Leer y abrir adjunto</label>
 </div>
+
+<div><h2 id="img2">
 <img src="https://ryanreviews2014.wordpress.com/wp-content/uploads/2014/09/makise-kurisu-full-146800.jpg" width="800" height="480" style="display: block; margin: 0 auto;">
+</div>
+
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+
+
 
 <!-- Capítulo 2 -->
+<div><h2 id="2"> </h2></div>
+<div class="centro">
+  <div class="bloque-desplegable">
+    <p class="texto-click">Capítulo 2</p>
+    <div class="texto-oculto">
+      <p>
 <div class="checklist">
-<h2>Capítulo 2</h2>
+<h2 id="cap2">Capítulo 2</h2>
 <label><input type="checkbox" id="c2a1"> Amanecer de un nuevo día → Leer todos los mails de Shining Finger (7/29-7/30)</label>
 <label><input type="checkbox" id="c2a2"> EMAIL RECIBIDO → 7/30 Shining Finger (sub: You sleep too much) → Leer</label>
 <label><input type="checkbox" id="c2a3"> EMAIL RECIBIDO → 7/30 Mayuri → Responder <span class="important">Ahorrando dinero</span></label>
 <label><input type="checkbox" id="c2a4"> EMAIL RECIBIDO → 7/30 Mayuri (sub: Thank you very much ♪) → Leer </label> 
 <label><input type="checkbox" id="c2a5"> Me despierto por el sol traspasando la ventana. → Bandeja de entrada → Faris (sub: Original Sin level rising to 180%) → Responder <span class="important">2000</span> </label>
-<label><input type="checkbox" id="c2a6"> EMAIL RECIBIDO → 7/30 Lukako → Responder <span class="important">Familia</span></label>
+<label><input type="checkbox" id="c2a6"> EMAIL RECIBIDO → 7/30 Luka → Responder <span class="important">Familia</span></label>
 <label><input type="checkbox" id="c2a7"> EMAIL RECIBIDO → 7/30 Shining Finger (sub: Por favor!) → Leer</label>
 <label><input type="checkbox" id="c2a8"> EMAIL RECIBIDO → 7/31 7/31 skyclad2010 @egw (sub: Greetings) → Responder <span class="important">Intercambiando correos</span></label>
 <label><input type="checkbox" id="c2a9"> EMAIL RECIBIDO → 7/31 John Titor (sub: Are you being honest?) → Leer </label>
@@ -79,28 +231,47 @@ h1,h2{text-align:center;color:#333;}
 <label><input type="checkbox" id="c2a13"> EMAIL RECIBIDO → 7/31 Shining Finger → Responde "Re:Call me" y "Re:Re:Re:Call me"</label>
 <label><input type="checkbox" id="c2a14"> LLAMADA ENTRANTE DE MAYURI → <span class="important">Responde</span> </label>
 <label><input type="checkbox" id="c2a15"> EMAIL RECIBIDO → 8/1 Part-Time Warrior → Responde <span class="important">Amor a primera vista</span></label>
-<label><input type="checkbox" id="c2a16"> EMAIL RECIBIDO → 8/1 Lukako → Responder <span class="important">Mi hermana mayor</span></label>
+<label><input type="checkbox" id="c2a16"> EMAIL RECIBIDO → 8/1 Luka → Responder <span class="important">Mi hermana mayor</span></label>
 <label><input type="checkbox" id="c2a17"> LLAMADA ENTRANTE → <span class="important">Responde</span> </label>
 <label><input type="checkbox" id="c2a18"> EMAIL RECIBIDO → 8/1 Part-Time Warrior (sub: You're evil?) → Leer </label>
 <label><input type="checkbox" id="c2a19"> EMAIL RECIBIDO → 8/1 Shining Finger (sub: Got info?) → Leer </label>
 <label><input type="checkbox" id="c2a20"> Tengo que responder a Shining Finger → Abrir bandeja de entrada → Shining Finger (sub: Got info?) → <span class="important">Responder</span> </label>
 <label><input type="checkbox" id="c2a21"> EMAIL RECIBIDO → 8/1 Shining Finger (sub: Re:Re:Got info?) → Leer </label>
 <label><input type="checkbox" id="c2a22"> EMAIL RECIBIDO → 8/1 Shining Finger (sub: Re:Re:Re:Re:Got info?) → Leer </label>
-<label><input type="checkbox" id="c2a23"> EMAIL RECIBIDO → 8/1 Lukako (sub: About my older sister) → Responder <span class="important">Cosas...</span> </label>
-<label><input type="checkbox" id="c2a23"> EMAIL RECIBIDO → 8/1 Lukako (sub: Re:Re:About my older sister) → Leer </label>
+<label><input type="checkbox" id="c2a23"> EMAIL RECIBIDO → 8/1 Luka (sub: About my older sister) → Responder <span class="important">Cosas...</span> </label>
+<label><input type="checkbox" id="c2a24"> EMAIL RECIBIDO → 8/1 Luka (sub: Re:Re:About my older sister) → Leer </label>
 </div>
+
+
+<div><h2 id="img3">
 <img src="https://static.zerochan.net/Amane.Suzuha.1024.895432.webp" width="800" height="480" style="display: block; margin: 0 auto;">
+</div>
+
+      </p>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
 
 <!-- Capítulo 3 -->
+<div><h2 id="3"> </h2></div>
+<div class="centro">
+  <div class="bloque-desplegable">
+    <p class="texto-click">Capítulo 3</p>
+    <div class="texto-oculto">
+      <p>
 <div class="checklist">
-<h2>Capítulo 3</h2>
-<label> Crear punto de guardado #1 </label>
+<h2 id="cap3">Capítulo 3</h2>
+<label><span class="important"> Crear punto de guardado #1 </span></label>
 <label><input type="checkbox" id="c3a1"> EMAIL RECIBIDO → 8/2 Faris → Responder <span class="important">Theme song</span></label>
 <label><input type="checkbox" id="c3a2"> EMAIL RECIBIDO → 8/2 Part-Time Warrior → Responder <span class="important">Insectos o plantas</span></label>
 <label><input type="checkbox" id="c3a3"> EMAIL RECIBIDO → 8/2 Part-Time Warrior (sub: Re:Re:Hungry) → Leer </label>
-<label><input type="checkbox" id="c3a4"> EMAIL RECIBIDO → 8/2 Lukako → Responder <span class="important">Ranas Gero</span></label>
-<label> No leer ningún mail de Shining Finger durante todo el capítulo </label>
-<label><input type="checkbox" id="c3a5"> EMAIL RECIBIDO → 8/3 Lukako (sub: More news about the frogs) → Abrir adjunto para 3 wallpapers </label>
+<label><input type="checkbox" id="c3a4"> EMAIL RECIBIDO → 8/2 Luka → Responder <span class="important">Ranas Gero</span></label>
+<label><span class="important"> No leer ningún mail de Shining Finger durante todo el capítulo </span></label>
+<label><input type="checkbox" id="c3a5"> EMAIL RECIBIDO → 8/3 Luka (sub: More news about the frogs) → Abrir adjunto para 3 wallpapers </label>
 <label><input type="checkbox" id="c3a6"> EMAIL RECIBIDO → 8/3 Faris → Responder <span class="important">RaiNet Kakeru</span> y abrir adjunto</label>
 <label><input type="checkbox" id="c3a7"> EMAIL RECIBIDO → 8/3 Faris (sub: RaiNet Ep 13) → Leer → Abrir archivo adjunto </label>
 <label><input type="checkbox" id="c3a8"> LLAMADA ENTRANTE DE DARU → <span class="important">Responder</span> </label>
@@ -108,14 +279,30 @@ h1,h2{text-align:center;color:#333;}
 <label><input type="checkbox" id="c3a10"> EMAIL RECIBIDO → 8/3 Mayuri → Responder <span class="important">Tres meses</span></label>
 <label><input type="checkbox" id="c3a11"> EMAIL RECIBIDO → 8/3 Mayuri (sub: It's not half-baked) → Leer </label>
 </div>
+
+<div> <h2 id="img4">
 <img src="https://images2.alphacoders.com/105/thumb-1920-1058819.png" width="800" height="480" style="display: block; margin: 0 auto;">
+</div>
+
+      </p>
+    </div>
+  </div>
+</div>
+
+
 
 <!-- Capítulo 4 -->
+<div><h2 id="4"> </h2></div>
+<div class="centro">
+  <div class="bloque-desplegable">
+    <p class="texto-click">Capítulo 4</p>
+    <div class="texto-oculto">
+      <p>
 <div class="checklist">
-<h2>Capítulo 4</h2>
+<h2 id="cap4">Capítulo 4</h2>
 <label><input type="checkbox" id="c4a1"> EMAIL RECIBIDO → 8/4 Mayuri → Responder <span class="important">Revista</span></label>
-<label><input type="checkbox" id="c4a2"> EMAIL RECIBIDO → 8/3 Lukako (sub: About RaiNet) → Responder <span class="important">Romance</span> → Abrir archivo adjunto </label>
-<label> Crear punto de guardado 2# </label>
+<label><input type="checkbox" id="c4a2"> EMAIL RECIBIDO → 8/3 Luka (sub: About RaiNet) → Responder <span class="important">Romance</span> → Abrir archivo adjunto </label>
+<label><span class="important"> Crear punto de guardado 2# </span> </label>
 <label><input type="checkbox" id="c4a3"> EMAIL RECIBIDO → 8/4 Ayudante (sub: Did you write it?) → Responder <span class="important">Report</span></label>
 <label><input type="checkbox" id="c4a4"> EMAIL RECIBIDO → 8/4 Part-Time Warrior (sub: Akihabara's) → Responder <span class="important">Pacífica</span></label>
 <label><input type="checkbox" id="c4a5"> EMAIL RECIBIDO → 8/4 Shining Finger (sub: Not just that) → Leer </label>
@@ -128,7 +315,7 @@ h1,h2{text-align:center;color:#333;}
 <label><input type="checkbox" id="c4a12"> LLAMADA TELÉFONO ASISTENTE </label>
 <label><input type="checkbox" id="c4a13"> EMAIL RECIBIDO → 8/7 Assistant (sub: Favor to ask) → Responder <span class="important">Hacodate número 1</span> </label>
 <label><input type="checkbox" id="c4a14"> EMAIL RECIBIDO → 8/7 Assistant (sub: It's Hacodate Number 1!) → Leer </label>
-<label><input type="checkbox" id="c4a15"> EMAIL RECIBIDO → 8/7 Lukako (sub: That game was fun) → Leer </label>
+<label><input type="checkbox" id="c4a15"> EMAIL RECIBIDO → 8/7 Luka (sub: That game was fun) → Leer </label>
 <label><input type="checkbox" id="c4a16"> EMAIL RECIBIDO → 8/8 patghqwskm @ninesixpbb → Leer → Abrir archivo adjunto </label>
 <label><input type="checkbox" id="c4a17"> EMAIL RECIBIDO → 8/8 Mayuri (sub: About Luka-chan) → Responder <span class="important">Kakeru kun</span> </label> </label>
 <label><input type="checkbox" id="c4a18"> EMAIL RECIBIDO → 8/8 Mayuri (sub: Kakeru-kun) → Leer → Abrir archivo adjunto </label>
@@ -138,65 +325,581 @@ h1,h2{text-align:center;color:#333;}
 <label><input type="checkbox" id="c4a22"> Sigo observando la tienda de Braun por la ventana... → 8/10 Daru (sub: lolwut) → Leer </label>
 <label><input type="checkbox" id="c4a23"> 8/10 Mayuri (sub: Disappeared) → Leer </label>
 </div>
+
+<div><h2 id="img5">
 <img src="https://images6.alphacoders.com/105/thumb-1920-1058827.png" width="800" height="480" style="display: block; margin: 0 auto;">
+</div>
+
+     </p>
+    </div>
+  </div>
+</div>
+
+
 
 <!-- Capítulo 5 -->
+<div><h2 id="5"> </h2></div>
+<div class="centro">
+  <div class="bloque-desplegable">
+    <p class="texto-click">Capítulo 5</p>
+    <div class="texto-oculto">
+      <p>
 <div class="checklist">
-<h2>Capítulo 5</h2>
-<label><input type="checkbox" id="c5a1"> LLAMADA ENTRANTE DE FARIS → No responder</label>
+<h2 id="cap5">Capítulo 5</h2>
+<label><input type="checkbox" id="c5a1"> LLAMADA ENTRANTE DE FARIS → <span class="important">No responder</span></label>
 <label><input type="checkbox" id="c5a2"> EMAIL RECIBIDO →  8/10 Part-Time Warrior (sub: Oneself) → Responder <span class="important">Falso yo</span> </label>
-<label> Crear punto de guardado 3# </label>
+<label><span class="important"> Crear punto de guardado 3# </span></label>
 <label><input type="checkbox" id="c5a3"> EMAIL RECIBIDO → 8/11 Mayuri (sub: What made me happy today) → Responder <span class="important">Fubuki chan y Kaede chan</span> </label>
 <label><input type="checkbox" id="c5a4"> Mientras cae la noche, tratamos de de activar el teléfono microondas otra vez... → 8/11 Mayuri (sub: Huh?) → Leer → Abrir archivo adjunto para recibir 2 wallpapers</label>
 <label><input type="checkbox" id="c5a5"> EMAIL RECIBIDO → 8/11 Faris (sub: ComiMa) → Responder <span class="important">Colapsando</span> </label>
 <label><input type="checkbox" id="c5a6"> EMAIL RECIBIDO → 8/11 patghqwskm @ninesixpbb → Leer → Abrir archivo adjunto </label>
-<label><input type="checkbox" id="c5a7"> Es viernes, y todavía no hemos solucionado el problema del ascensor... → 8/13 Lukako (sub: Summer plans) → Responde <span class="important">Mayuri</span> </label>
+<label><input type="checkbox" id="c5a7"> Es viernes, y todavía no hemos solucionado el problema del ascensor... → 8/13 Luka (sub: Summer plans) → Responde <span class="important">Mayuri</span> </label>
 <label><input type="checkbox" id="c5a8"> EMAIL RECIBIDO → 8/13 Faris (sub: Re:Re:ComiMa) → Leer → Abrir archivo adjunto </label>
-<label><input type="checkbox" id="c5a9"> EMAIL RECIBIDO → 8/13 Lukako (sub: About Mayuri-chan) → Leer </label>
+<label><input type="checkbox" id="c5a9"> EMAIL RECIBIDO → 8/13 Luka (sub: About Mayuri-chan) → Leer </label>
 <label><input type="checkbox" id="c5a10"> EMAIL RECIBIDO → 8/13 Part-Time Warrior (sub: Re:Re:Oneself) → Leer </label>
 </div>
+
+<div><h2 id="img6">
 <img src="https://konachan.net/jpeg/09bcd0f8db26ed10755b5b505aebdedc/Konachan.com%20-%20112125%20amane_suzuha%20game_cg%20huke%20steins%3Bgate.jpg" width="800" height="480" style="display: block; margin: 0 auto;">
+</div>
+
+      </p>
+    </div>
+  </div>
+</div>
+
+
 
 <!-- Capítulo 6 -->
+<div><h2 id="6"> </h2></div>
+<div class="centro">
+  <div class="bloque-desplegable">
+    <p class="texto-click">Capítulo 6</p>
+    <div class="texto-oculto">
+      <p>
 <div class="checklist">
-<h2>Capítulo 6</h2>
+<h2 id="cap6">Capítulo 6</h2>
 <label><input type="checkbox" id="c6a1"> ...¿Dónde está Mayuri? → Abrir libreta de contactos → Mayuri </label>
-<label><input type="checkbox" id="c6a2"> Debería llamar o enviarle un mensaje → Abrir libreta de contactos → Lukako → <span class="important">Llamar</span> </label>
+<label><input type="checkbox" id="c6a2"> Debería llamar o enviarle un mensaje → Abrir libreta de contactos → Luka → <span class="important">Llamar</span> </label>
 <label><input type="checkbox" id="c6a3"> EMAIL RECIBIDO → 8/13 John Titor (sub: Thanks) → Leer </label>
-<label> Crear punto de guardado 4# </label>
+<label><span class="important"> Crear punto de guardado 4# </span></label>
 <label><input type="checkbox" id="c6a4">No envíes el D-Mail para llegar al ending de Suzuha Amane. </label>
 </div>
+
+<div><h2 id="img7">
 <img src="https://static.zerochan.net/Steins%3BGate.full.513448.jpg" width="800" height="480" style="display: block; margin: 0 auto;">
+</div>
 
-<div class="footer">
-<p> Esto solo es la primera parte del juego 🐎 cuando tenga más tiempo y ganas seguiré haciendo de las otras rutas</p>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Final Ruta Suzuha -->
+
+
+
+<!-- Ruta Faris -->
+
+<h1 id="faris">Ruta Faris</h1>
+<img src="https://static.zerochan.net/Rumiho.Akiha.full.437135.jpg" width="800" height="480" style="display: block; margin: 0 auto;">
+
+
+<!-- Capítulo 6 -->
+<div><h2 id="far6"> </h2></div>
+<div class="centro">
+  <div class="bloque-desplegable">
+    <p class="texto-click">Capítulo 6</p>
+    <div class="texto-oculto">
+      <p>
+<div class="checklist">
+<h2 id="f6">Capítulo 6</h2>
+<label> <span class="important">Cargar punto de guardado #4</span></label>
+<label><input type="checkbox" id="c6a5"> Ahora solo necesito enviarlo → Enviar </label>
+</div>
+
+<div><h2 id="img8">
+<img src="https://chaosgate.team/assets/images/sgphenogram/0.png" width="800" height="480" style="display: block; margin: 0 auto;">
+    </div>
+
+  </p>
+  </div>
+</div>
+</div>
+  <div> <h1>   </div>
+
+<!-- Capítulo 7 -->
+<div class="centro">
+ <div><h2 id="far7"> </h2></div>
+  <div class="bloque-desplegable">
+    <p class="texto-click">Capítulo 7</p>
+    <div class="texto-oculto">
+      <p>
+<div class="checklist">
+<h2 id="f7">Capítulo 7</h2>
+<label><input type="checkbox" id="c7a1"> EMAIL RECIBIDO → 8/14 Mayuri (sub: Where are you going?) → Responder <span class="important">Cita (o Fecha)</span></label>
+<label><input type="checkbox" id="c7a2"> EMAIL RECIBIDO → 8/14 Mayuri (sub: A difficult conversation?) → Leer </label>
+<label><label><input type="checkbox" id="c7a3"> Debería ponerme en contacto con ella → Libreta de contactos → Llamar a Faris </label>
+<label><label><input type="checkbox" id="c7a4"> Tal vez debería intentar llamar a Faris otra vez → Llamar otra vez </label>
+<label><input type="checkbox" id="c7a5"> EMAIL RECIBIDO → 8/13 Mayuri (sub: Today's worry) → Responder <span class="important">Abuela</span></label>
+<label><input type="checkbox" id="c7a6"> EMAIL RECIBIDO → 8/13 Mayuri (sub: Lap pillow) → Leer</label>
+<label><input type="checkbox" id="c7a7"> LLAMADA ENTRANTE DE DARU → Responder </label>
+<label><input type="checkbox" id="c7a8"> LLAMADA ENTRANTE DE AYUDANTE → No responder </label>
+<label><span class="important">Crear punto de guardado #5</span></label>
+<label><label><input type="checkbox" id="c7a9"> No envies el D-Mail para llegar al final de Faris </label>
+    </div>
+<div><h2 id="img9">
+<img src="https://images3.alphacoders.com/105/thumb-1920-1058745.png" width="800" height="480" style="display: block; margin: 0 auto;">  
+</div>
+
+</p>
+  </div>
+</div>
+</div>
+
+<!-- Final Ruta Faris -->
+
+<!-- Ruta Luka -->
+
+
+<h1 id="luka">Ruta Luka</h1>
+<img src="https://static.zerochan.net/Urushibara.Ruka.full.647901.jpg" width="800" height="480" style="display: block; margin: 0 auto;"></div>
+
+
+<!-- Capítulo 7 -->
+<div><h2 id="luk7"> </h2></div>
+<div class="centro">
+  <div class="bloque-desplegable">
+    <p class="texto-click">Capítulo 7</p>
+    <div class="texto-oculto">
+      <p>
+<div class="checklist">
+<label><span class="important">Cargar punto de guardado #5</span> </label>
+<label><input type="checkbox" id="c7a10"> El recuerdo de Faris, la campeona de RaiNet → Enviar </label>
+    </div>
+<div><h2 id="img10">
+<img src="https://static.zerochan.net/Urushibara.Ruka.full.552935.jpg" width="800" height="480" style="display: block; margin: 0 auto;">
+</div>
+
+</p>
+    </div>
+</div>
+</div>
+<div><h1></div>
+
+<!-- Capítulo 8 -->
+<div><h2 id="luk8"> </h2></div>
+<div class="centro">
+  <div class="bloque-desplegable">
+    <p class="texto-click">Capítulo 8</p>
+    <div class="texto-oculto">
+      <p>
+<div class="checklist">
+<label><input type="checkbox" id="c8a1"> EMAIL RECIBIDO → 8/14 Mayuri (sub: They had a fight) → Responder <span class="important">Persona que me gusta</span></label>
+<label><input type="checkbox" id="c8a2"> EMAIL RECIBIDO → 8/14 Mayuri (sub: Re:Re:They had a fight) → Leer </label>
+<label><label><input type="checkbox" id="c8a3"><span class="important"> Necesito saltar en el tiempo ahora.  → No hagas saltos en el tiempo → ...Siempre puedo saltar en el tiempo más tarde. </span></label>
+<label><input type="checkbox" id="c8a4"> EMAIL RECIBIDO → 8/12 Mayuri (sub: Um) → Leer </label>
+<label><span class="important"> Crear punto de guardado #6 </span></label>
+<label><input type="checkbox" id="c8a5">No envies el D-Mail para el final de Luka</label>
+ </div>
+<div><h2 id="img18">
+<img src="https://static0.cbrimages.com/wordpress/wp-content/uploads/2021/01/luka-steinsgate-anime.jpg?q=50&fit=crop&w=825&dpr=1.5" width="800" height="480" style="display: block; margin: 0 auto;">
+</div>
+</p>
+    </div>
+</div>
+</div>
+<div><h1></div>
+
+<!-- Final Ruta Luka -->
+
+<!-- Ruta Mayuri -->
+
+<h1 id="mayu">Ruta Mayuri</h1>
+<img src="https://www.kirikiribasara.com/wp-content/uploads/2024/01/steins2.png" width="800" height="480" style="display: block; margin: 0 auto;">
+
+
+
+<!-- Capítulo 8 -->
+<div><h2 id="may8"> </h2></div>
+<div class="centro">
+  <div class="bloque-desplegable">
+    <p class="texto-click">Capítulo 8</p>
+    <div class="texto-oculto">
+      <p>
+<div class="checklist">
+<label><span class="important">Cargar punto de guardado #6</span> </label>
+<label><input type="checkbox" id="c8a6">Con una sola llamada al teléfono miroondas, [...] → Libreta de contactos → PhoneWave → Llamar </label>
+  </div>
+<div><h2 id="img11">
+<img src="https://static.zerochan.net/Steins%3BGate.full.595376.jpg" width="800" height="480" style="display: block; margin: 0 auto;">
+</div>
+
+</p>
+    </div>
+</div>
+</div>
+<div><h1></div>
+
+<!-- Capítulo 9 -->
+<div><h2 id="may9"> </h2></div>
+<div class="centro">
+  <div class="bloque-desplegable">
+    <p class="texto-click">Capítulo 9</p>
+    <div class="texto-oculto">
+      <p>
+<div class="checklist">
+<label><input type="checkbox" id="c9a1"> No he visto a Mayuri en todo el día. → 8/16 Mayuri (sub: I'm off!) → Leer → 8/16 Ayudante (sub: Headed out) → Leer → 8/16 Ayudante (sub: So many people) → Leer <label>
+<label><input type="checkbox" id="c9a2"> Y entonces, saltaré. [...] → No hagas salto temporal → ...Cierro mi teléfono.</label>
+<label><input type="checkbox" id="c9a3"> LLAMADA ENTRANTE AYUDANTE → <span class="important">Responder</span></label>
+<label><input type="checkbox" id="c9a4"> EMAIL RECIBIDO → 8/11 Mayuri (sub: Are you coming back?) → Responder <span class="important">Regresando</span></label>
+<label><input type="checkbox" id="c9a5"> LLAMADA ENTRANTE AYUDANTE →  <span class="important">No Responder</span>
+<label><input type="checkbox" id="c9a6"> EMAIL RECIBIDO →  8/12 Daru (sub: Found it) → Leer </label>
+<label><input type="checkbox" id="c9a7"> Kurisu suspira cuando me ve. → Bandeja de entrarda  → 8/15 Mayuri (sub: Orion) → Responder <span class="important">Al mismo tiempo</span></label>
+<label><input type="checkbox" id="c9a8"> ...¿Esto realmente está bien? → No envíes el D-Mail → Por supuesto que sí. </label>
+<label><input type="checkbox" id="c9a9"> 8/15 Mayuri (sub: Haven't seen you in a while) → Leer </label>
+  </div>
+<div><h2 id="img12">
+<img src="https://static.zerochan.net/Shiina.Mayuri.full.648026.jpg" width="800" height="480" style="display: block; margin: 0 auto;">
+</div>
+
+</p>
+    </div>
+</div>
+</div>
+<div><h1></div>
+
+<!-- Capítulo 10 -->
+<div><h2 id="ma10"> </h2></div>
+<div class="centro">
+  <div class="bloque-desplegable">
+    <p class="texto-click">Capítulo 10</p>
+    <div class="texto-oculto">
+      <p>
+<div class="checklist">
+<label><label><input type="checkbox" id="c10a1"> LLAMADA ENTRANTE MAYURI → <span class="important">Responder</span>
+<label><label><input type="checkbox" id="c10a2"> Espero unas dos horas antes de volver al laboratorio.  → 8/16 Assistant (sub: see you) → Leer </span> </label>
+  </div>
+<div><h2 id="img13">
+<img src="https://static.zerochan.net/Steins%3BGate.full.442083.jpg" width="800" height="480" style="display: block; margin: 0 auto;">
+</div>
+</p>
+    </div>
+</div>
+</div>
+<div><h1></div>
+
+<!-- Final Ruta Mayuri -->
+
+<!-- Ruta Kurisu -->
+
+<h1 id="kuri">Ruta Kurisu</h1>
+<img src="https://static.zerochan.net/Makise.Kurisu.full.567065.jpg" width="800" height="480" style="display: block; margin: 0 auto;">
+
+
+<!-- Capítulo 4 -->
+
+<div><h2 id="kur4"> </h2></div>
+<div class="centro">
+  <div class="bloque-desplegable">
+    <p class="texto-click">Capítulo 4</p>
+    <div class="texto-oculto">
+      <p>
+<div class="checklist">
+<label><span class="important">Cargar punto de guardado #2</span> </label>
+<label><input type="checkbox" id="c4a24"> EMAIL RECIBIDO → 8/4 Ayudante (sub: Did you write it?) → Responder <span class="important">Científico</span></label>
+<label><input type="checkbox" id="c4a25"> EMAIL RECIBIDO → 8/4 Ayudante (sub: Scientist??) → Responder <span class="important">Mal científico</span></label>
+<label><input type="checkbox" id="c4a26"> EMAIL RECIBIDO → 8/4 Ayudante (sub: Bad Scientist) → Responder <span class="important">Hacerlo mejor</span></label>
+<label><input type="checkbox" id="c4a27"> EMAIL RECIBIDO → 8/4 Part-Time Warrior (sub: Akihabara's) → Leer </label>
+<label><input type="checkbox" id="c4a28"> EMAIL RECIBIDO → 8/6 Faris (sub: Sign of increasing misfortune) → Responder <span class="important">Él</span></label>
+<label><input type="checkbox" id="c4a29"> EMAIL RECIBIDO → 8/6 Mayuri (sub: Going out? Lelele) → Leer </label>
+<label><input type="checkbox" id="c4a30"> Me paso la mañana siguiente en la lavandería. → 8/7 Faris (sub: About abilities) → Responder <span class="important">NyanNyanian</span></label>
+<label><input type="checkbox" id="c4a31"> Kiryu Moeka → Libreta de contactos → Shining Finger → Enviar mensaje </label>
+<label><input type="checkbox" id="c4a32"> Debería llamarlo → Libreta de contactos → Luka → Llamar </label>
+<label><input type="checkbox" id="c4a33"> EMAIL RECIBIDO → 8/7 Ayudante (sub: Home Alone) → Responder <span class="important">Forastero</span></label>
+<label><input type="checkbox" id="c4a34"> EMAIL RECIBIDO → 8/7 Ayudante (sub: Ehhh?) → Responder <span class="important">Desgracia</span></label>
+<label><input type="checkbox" id="c4a35"> LLAMADA ENTRANTE AYUDANTE </label>
+<label><input type="checkbox" id="c4a36"> EMAIL RECIBIDO → 8/7 Ayudante (sub: Staring at my hand) → Responder <span class="important">¿Por qué sigo aquí?</span></label>
+<label><input type="checkbox" id="c4a37"> EMAIL RECIBIDO → 8/7 Luka (sub: That game was fun) → Leer </label>
+<label><input type="checkbox" id="c4a38"> EMAIL RECIBIDO → 8/8 Ayudante (sub: Being here) → Leer </label> 
+<label><input type="checkbox" id="c4a39"> EMAIL RECIBIDO → 8/8 patghqwskm @ninesixpbb → Leer → Abrir archivo adjunto </label>
+<label><input type="checkbox" id="c4a40"> EMAIL RECIBIDO → 8/9 Part-Time Warrior (sub: EUREKA) → Leer </label>
+<label><input type="checkbox" id="c4a41"> EMAIL RECIBIDO → 8/9 Faris (sub: Cat tongue nya) → Leer </label>
+<label><input type="checkbox" id="c4a42"> Sigo observando la tienda de Braun por la ventana... → 8/10 Daru (sub: lolwut) → Leer → 8/10 Mayuri (sub: Disappeared) → Leer </label>
+  </div>
+<div><h2 id="img14">
+<img src="https://static.zerochan.net/Steins%3BGate.full.234099.jpg" width="800" height="480" style="display: block; margin: 0 auto;">
+</div>
+
+</p>
+    </div>
+</div>
+</div>
+<div><h1></div>
+
+<!-- Capítulo 5 -->
+
+<div><h2 id="kur5"> </h2></div>
+<div class="centro">
+  <div class="bloque-desplegable">
+    <p class="texto-click">Capítulo 5</p>
+    <div class="texto-oculto">
+      <p>
+<div class="checklist">
+<label><input type="checkbox" id="c5a11"> LLAMADA ENTRANTE DE FARIS → <span class="important">Responder</span></label>
+<label><input type="checkbox" id="c5a12"> EMAIL RECIBIDO → 8/10 Part-Time Warrior (sub: Oneself) → Leer </label>
+<label><input type="checkbox" id="c5a13"> EMAIL RECIBIDO → 8/11 Ayudante (sub: Plans) → Responder <span class="important">Gastos de viaje </span></label>
+<label><input type="checkbox" id="c5a14"> EMAIL RECIBIDO → 8/11 Ayudante (sub: Idiot!) → Leer </label>
+<label><input type="checkbox" id="c5a15"> EMAIL RECIBIDO → 8/11 Ayudante (sub: ( ´ ・ω・` )) → Leer </label>
+<label><input type="checkbox" id="c5a16"> EMAIL RECIBIDO → 8/11 Faris (sub: ComiMa) → Leer </label>
+<label><input type="checkbox" id="c5a17"> EMAIL RECIBIDO → 8/11 patghqwskm @ninesixpbb → Leer → Abrir archivo adjunto </label>
+<label><input type="checkbox" id="c5a18"> Es viernes, y todavía no hemos solucionado el problema del ascensor... → 8/13 Luka (sub: Summer plans) → Leer </label>
+</div>
+<div><h2 id="img15">
+<img src="https://static.zerochan.net/Steins%3BGate.full.146804.jpg" width="800" height="480" style="display: block; margin: 0 auto;">
+</div>
+
+</p>
+    </div>
+</div>
+</div>
+<div><h1></div>
+
+<!-- Capítulo 6 -->
+
+<div><h2 id="kur6"> </h2></div>
+<div class="centro">
+  <div class="bloque-desplegable">
+    <p class="texto-click">Capítulo 6</p>
+    <div class="texto-oculto">
+      <p>
+<div class="checklist">
+<label><input type="checkbox" id="c6a6"> Yo... → No llames a Mayuri → "Whew..." </label>
+<label><input type="checkbox" id="c6a7"> Debería llamalo o enviarle un mail → Libreta de contactos → Luka → Llamar </label>
+<label><input type="checkbox" id="c6a8"> Me pregunto si su teléfono está encendido. → Libreta de contactos → Part-Time Warrior </label>
+<label><input type="checkbox" id="c6a9"> Me pregunto cómo están progresando los demás miembros del laboratorio. → Libreta de contactos → Ayudante → Llamar </label>
+<label><input type="checkbox" id="c6a10"> EMAIL RECIBIDO → 8/13 John Titor (sub: Thanks) → Leer </label>
+<label><input type="checkbox" id="c6a11"> Ahora solo tengo que enviarlo → Enviar </label>
+</div>
+<div><h2 id="img15">
+<img src="https://static.zerochan.net/Steins%3BGate.full.146886.jpg" width="800" height="480" style="display: block; margin: 0 auto;">
+</div>
+
+</p>
+    </div>
+</div>
+</div>
+<div><h1></div>
+
+
+<!-- Capítulo 7 -->
+
+<div><h2 id="kur7"> </h2></div>
+<div class="centro">
+  <div class="bloque-desplegable">
+    <p class="texto-click">Capítulo 7</p>
+    <div class="texto-oculto">
+      <p>
+<div class="checklist">
+<label><span class="important"> Crear punto de guardado #7</span></label>
+<label><input type="checkbox" id="c7a11"> EMAIL RECIBIDO → 8/14 Ayudante (sub: The key (ﾉД`)) → Responder <span class="important">No tengo una llave</span></label>
+<label><span class="important"> Crear punto de guardado #8<span></label>
+<label><input type="checkbox" id="c7a12"> EMAIL RECIBIDO → 8/14 Ayudante (sub: (   ﾟ   Д ﾟ   )) → Responder <span class="important">Seguridad</span></label>
+<label><input type="checkbox" id="c7a13"> Debería ponerme en contacto con ella . → Libreta de contactos → Faris → Llamar </label>
+<label><input type="checkbox" id="c7a14"> Daru... → Libreta de contactos → Daru → Llamar </label>
+<label><input type="checkbox" id="c7a15"> Debería intentar llamar otra vez a Faris → Libreta de contactos → Faris </label>
+<label><input type="checkbox" id="c7a16"> EMAIL RECIBIDO → 8/13 Ayudante (sub: You're delusional, I know) → Responder <span class="important">Realidad</span></label>
+<label><input type="checkbox" id="c7a17"> EMAIL RECIBIDO → 8/13 Assistant (sub: Reality) → Leer </label>
+<label><input type="checkbox" id="c7a18"> LLAMADA ENTRANTE DE DARU → No responder </label>
+<label><input type="checkbox" id="c7a19"> LLAMADA ENTRANTE ASISTENTE → Responder </label>
+<label><input type="checkbox" id="c7a20"> Lo siento Faris... → Enviar </label>
+</div>
+<div><h2 id="img15">
+<img src="https://static.zerochan.net/Makise.Kurisu.full.4592082.png" width="800" height="480" style="display: block; margin: 0 auto;">
+</div>
+
+</p>
+    </div>
+</div>
+</div>
+<div><h1></div>
+
+
+<!-- Capítulo 8 -->
+
+<div><h2 id="kur8"> </h2></div>
+<div class="centro">
+  <div class="bloque-desplegable">
+    <p class="texto-click">Capítulo 8</p>
+    <div class="texto-oculto">
+      <p>
+<div class="checklist">
+<label><input type="checkbox" id="c8a7"> EMAIL RECIBIDO → 8/14 Ayudante (sub: Explain yourself!) → Responder <span class="important">¿Qué fue eso?</span></label>
+<label><input type="checkbox" id="c8a8"> EMAIL RECIBIDO → 8/14 Ayudante (sub: Lies!) → Leer </label>
+<label><input type="checkbox" id="c8a9"> ¿Morirá realmente ... el día 15? → Libreta de contactos → PhoneWaver → Llamar </label>
+<label><input type="checkbox" id="c8a10"> EMAIL RECIBIDO → 8/13 Ayudante (sub: From an unpopular girl) → Leer </label>
+<label><input type="checkbox" id="c8a11"> ¿Tu... Me recordarás? → Libreta de contactos → PhoneWaver → Llamar </label>
+</div>
+<div><h2 id="img15">
+<img src="https://static.zerochan.net/Makise.Kurisu.full.647819.jpg" width="800" height="480" style="display: block; margin: 0 auto;">
+</div>
+
+</p>
+    </div>
+</div>
+</div>
+<div><h1></div>
+
+
+
+<!-- Capítulo 9 -->
+
+<div><h2 id="kur9"> </h2></div>
+<div class="centro">
+  <div class="bloque-desplegable">
+    <p class="texto-click">Capítulo 9</p>
+    <div class="texto-oculto">
+      <p>
+<div class="checklist">
+<label><input type="checkbox" id="c9a10"> No he visto a Mayuri en todo el día. → 8/16 Mayuri (sub: I'm off!) → Leer → 8/16 Ayudante (sub: Headed out) → Leer → 8/16 Ayudante (sub: So many people) → Leer <label>
+<label><input type="checkbox" id="c9a11"> ...¿Debería realmente saltar ahora? → Libreta de contactos → PhoneWaver → Llamar </label>
+<label><input type="checkbox" id="c9a12"> LLAMADA ENTRANTE ASISTENTE → Responder </label>
+<label><input type="checkbox" id="c9a13"> Saco el teléfono de Moeka de mi bolsillo.  → Ayudante 8/11 (sub: Contact me, idiot!) → Responder <span class="important">Preocupado</span></label>
+<label><input type="checkbox" id="c9a14"> EMAIL RECIBIDO → 8/12 Daru (sub: Found it) → Leer </label>
+<label><input type="checkbox" id="c9a15"> EMAIL RECIBIDO → 8/12 Ayudante (sub: Re:Re:Contact me, idiot!) → Leer </label>
+<label><input type="checkbox" id="c9a16"> Echo un último vistazo al cuerpo de Moeka → Enviar </label>
+</div>
+<div><h2 id="img15">
+<img src="https://static.zerochan.net/Steins%3BGate.full.567076.jpg" width="800" height="480" style="display: block; margin: 0 auto;">
+</div>
+
+</p>
+    </div>
+</div>
+</div>
+<div><h1></div>
+
+<!-- Capítulo 10 -->
+
+<div><h2 id="kur10"> </h2></div>
+<div class="centro">
+  <div class="bloque-desplegable">
+    <p class="texto-click">Capítulo 10</p>
+    <div class="texto-oculto">
+      <p>
+<div class="checklist">
+<label><span class="important"> Crear punto de guardado #9<span></label>
+<label><input type="checkbox" id="c10a3"> EMAIL RECIBIDO → 8/15 Ayudante (sub: Where are you now?) → Leer </label>
+<label><input type="checkbox" id="c10a4"> LLAMADA ENTRANTE DE MAYURI → No responder </label>
+</div>
+<div><h2 id="img15">
+<img src="https://static.zerochan.net/Steins%3BGate.full.1176886.jpg" width="800" height="480" style="display: block; margin: 0 auto;">
+</div>
+
+</p>
+    </div>
+</div>
+</div>
+<div><h1></div>
+
+
+<!-- Final Ruta Kurisu -->
+
+<!-- Final Verdadero -->
+
+<h1 id="kuri">Final Verdadero</h1>
+<img src="https://static.zerochan.net/Steins%3BGate.full.505021.jpg" width="800" height="480" style="display: block; margin: 0 auto;">
+
+<!-- Final -->
+
+<div><h2 id="fin1"> </h2></div>
+<div class="centro">
+  <div class="bloque-desplegable">
+    <p class="texto-click">Final</p>
+    <div class="texto-oculto">
+      <p>
+<div class="checklist">
+<label><span class="important"> Cargar punto de guardado #9<span></label>
+<label><input type="checkbox" id="c10a5"> EMAIL RECIBIDO → 8/15 Ayudante (sub: Where are you now?) → Responder <span class="important">Donde estás tú</span></label> 
+<label><input type="checkbox" id="c10a6"> LLAMADA ENTRANTE DE MAYURI → Responder </label>
+<label><span class="important">Después de conseguir este final vuelve a cargar la partida, verás un correo nuevo, abre el archivo adjunto para recibir la última CG<span></label>
+</div>
+<div><h2 id="img15">
+<img src="https://static.zerochan.net/Steins%3BGate.full.513912.jpg" width="800" height="480" style="display: block; margin: 0 auto;">
+</div>
+
+</p>
+    </div>
+</div>
+</div>
+<div><h1></div>
+
+<!-- Final del final -->
+
+
+<!-- Fin -->
+
+<div class="checklist">
+<h2 id="Fin">Fin</h2>
+<label> Muchas gracias por usar/entrar en esta guía. Me divertí mucho haciéndola, espero que esté bien, y si hay algún fallo pues decidmelo y actualizo la página. El psy kongroo</label>
+<img src="https://static.zerochan.net/Steins%3BGate.full.505021.jpg" width="800" height="480" style="display: block; margin: 0 auto;">
+</div>
+
+<!-- Final de página -->
+
+
 <script>
-// Guardar y cargar checklist
-function saveChecklist() {
-  document.querySelectorAll('.checklist input[type="checkbox"]').forEach((checkbox,index)=>{
-    localStorage.setItem('checkbox-'+index,checkbox.checked);
-  });
-}
-function loadChecklist(){
-  document.querySelectorAll('.checklist input[type="checkbox"]').forEach((checkbox,index)=>{
-    checkbox.checked=localStorage.getItem('checkbox-'+index)==='true';
-  });
-}
+document.addEventListener('DOMContentLoaded', () => {
 
-// Guardar y cargar color de fondo
-const colorPicker=document.getElementById('colorPicker');
-function changeBackgroundColor(color){
-  document.body.style.backgroundColor=color;
-  localStorage.setItem('backgroundColor',color);
-}
+  // Guardar el estado de cada checkbox usando su ID
+  function saveChecklist() {
+    document.querySelectorAll('.checklist input[type="checkbox"]').forEach(cb => {
+      if(cb.id) {
+        localStorage.setItem('checkbox-' + cb.id, cb.checked);
+      }
+    });
+  }
 
-window.onload=()=>{
+  // Cargar el estado de cada checkbox usando su ID
+  function loadChecklist() {
+    document.querySelectorAll('.checklist input[type="checkbox"]').forEach(cb => {
+      if(cb.id) {
+        cb.checked = localStorage.getItem('checkbox-' + cb.id) === 'true';
+      }
+    });
+  }
+
+  // Restaurar color de fondo
+  const colorPicker = document.getElementById('colorPicker');
+  if(colorPicker) {
+    const savedColor = localStorage.getItem('backgroundColor');
+    if(savedColor) {
+      document.body.style.backgroundColor = savedColor;
+      colorPicker.value = savedColor;
+    }
+    colorPicker.addEventListener('input', e => {
+      document.body.style.backgroundColor = e.target.value;
+      localStorage.setItem('backgroundColor', e.target.value);
+    });
+  }
+
+  // Inicializar desplegables
+  document.querySelectorAll('.texto-click').forEach(t => {
+    t.addEventListener('click', () => {
+      const next = t.nextElementSibling;
+      if(next) next.classList.toggle('activo');
+    });
+  });
+
+  // Inicializar checklist
   loadChecklist();
-  document.querySelectorAll('.checklist input[type="checkbox"]').forEach(cb=>cb.addEventListener('change',saveChecklist));
-  const savedColor=localStorage.getItem('backgroundColor');
-  if(savedColor){document.body.style.backgroundColor=savedColor;colorPicker.value=savedColor;}
-  colorPicker.addEventListener('input',e=>changeBackgroundColor(e.target.value));
-};
+
+  // Guardar cada vez que cambia un checkbox
+  document.querySelectorAll('.checklist input[type="checkbox"]').forEach(cb => {
+    cb.addEventListener('change', saveChecklist);
+  });
+
+});
 </script>
 </body>
 </html>
